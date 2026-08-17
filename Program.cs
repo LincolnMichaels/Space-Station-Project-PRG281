@@ -45,7 +45,7 @@ namespace Chris_602473_Prg281_Proj
                 Console.WriteLine("13. Restart Simulation (reset to defaults)");
                 Console.WriteLine("0. Exit");
                 Console.Write("Choose: \n\n");
-                
+
                 string choice = Console.ReadLine();
 
                 switch (choice)
@@ -102,8 +102,13 @@ namespace Chris_602473_Prg281_Proj
                         Console.WriteLine("Invalid choice.");
                         break;
                 }
-                Console.WriteLine("\nPress any Key to continue...");
-                Console.ReadKey();
+
+                if (!exit)
+                {
+                    Console.WriteLine("\nPress any Key to continue...");
+                    Console.ReadKey();
+                }
+
             }
         }
 

@@ -6,3 +6,11 @@ C:\Users\linco\OneDrive\Desktop\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_
 C:\Users\linco\OneDrive\Desktop\Chris_602473_Prg281_Proj\bin\Debug\Chris_602473_Prg281_Proj.exe.config
 C:\Users\linco\OneDrive\Desktop\Chris_602473_Prg281_Proj\bin\Debug\Chris_602473_Prg281_Proj.exe
 C:\Users\linco\OneDrive\Desktop\Chris_602473_Prg281_Proj\bin\Debug\Chris_602473_Prg281_Proj.pdb
+C:\Users\linco\OneDrive\Documents\Space Station Project PRG281\Space Station Project PRG281\bin\Debug\Chris_602473_Prg281_Proj.exe.config
+C:\Users\linco\OneDrive\Documents\Space Station Project PRG281\Space Station Project PRG281\bin\Debug\Chris_602473_Prg281_Proj.exe
+C:\Users\linco\OneDrive\Documents\Space Station Project PRG281\Space Station Project PRG281\bin\Debug\Chris_602473_Prg281_Proj.pdb
+C:\Users\linco\OneDrive\Documents\Space Station Project PRG281\Space Station Project PRG281\obj\Debug\Lincoln_602473_Prg281_Proj.csproj.AssemblyReference.cache
+C:\Users\linco\OneDrive\Documents\Space Station Project PRG281\Space Station Project PRG281\obj\Debug\Chris_602473_Prg281_Proj.exe.config
+C:\Users\linco\OneDrive\Documents\Space Station Project PRG281\Space Station Project PRG281\obj\Debug\Lincoln_602473_Prg281_Proj.csproj.CoreCompileInputs.cache
+C:\Users\linco\OneDrive\Documents\Space Station Project PRG281\Space Station Project PRG281\obj\Debug\Chris_602473_Prg281_Proj.exe
+C:\Users\linco\OneDrive\Documents\Space Station Project PRG281\Space Station Project PRG281\obj\Debug\Chris_602473_Prg281_Proj.pdb
