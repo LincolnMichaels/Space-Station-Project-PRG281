@@ -1,0 +1,5 @@
+C:\Users\linco\OneDrive\Desktop\Chris_602473_Prg281_Proj\obj\Debug\Lincoln_602473_Prg281_Proj.csproj.AssemblyReference.cache
+C:\Users\linco\OneDrive\Desktop\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.exe.config
+C:\Users\linco\OneDrive\Desktop\Chris_602473_Prg281_Proj\obj\Debug\Lincoln_602473_Prg281_Proj.csproj.CoreCompileInputs.cache
+C:\Users\linco\OneDrive\Desktop\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.exe
+C:\Users\linco\OneDrive\Desktop\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.pdb

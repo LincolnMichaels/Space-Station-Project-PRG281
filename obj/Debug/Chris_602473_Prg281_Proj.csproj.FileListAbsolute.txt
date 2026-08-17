@@ -1,0 +1,15 @@
+C:\Users\chris\source\repos\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.csproj.AssemblyReference.cache
+C:\Users\chris\source\repos\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.csproj.CoreCompileInputs.cache
+C:\Users\chris\source\repos\Chris_602473_Prg281_Proj\bin\Debug\Chris_602473_Prg281_Proj.exe.config
+C:\Users\chris\source\repos\Chris_602473_Prg281_Proj\bin\Debug\Chris_602473_Prg281_Proj.exe
+C:\Users\chris\source\repos\Chris_602473_Prg281_Proj\bin\Debug\Chris_602473_Prg281_Proj.pdb
+C:\Users\chris\source\repos\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.exe
+C:\Users\chris\source\repos\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.pdb
+C:\Users\varki\Downloads\Chris_602473_Prg281_Proj\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.csproj.AssemblyReference.cache
+C:\Users\varki\Downloads\Chris_602473_Prg281_Proj\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.exe.config
+C:\Users\varki\Downloads\Chris_602473_Prg281_Proj\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.csproj.CoreCompileInputs.cache
+C:\Users\varki\Downloads\Chris_602473_Prg281_Proj\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.exe
+C:\Users\varki\Downloads\Chris_602473_Prg281_Proj\Chris_602473_Prg281_Proj\obj\Debug\Chris_602473_Prg281_Proj.pdb
+C:\Users\varki\Downloads\Chris_602473_Prg281_Proj\Chris_602473_Prg281_Proj\bin\Debug\Chris_602473_Prg281_Proj.exe.config
+C:\Users\varki\Downloads\Chris_602473_Prg281_Proj\Chris_602473_Prg281_Proj\bin\Debug\Chris_602473_Prg281_Proj.exe
+C:\Users\varki\Downloads\Chris_602473_Prg281_Proj\Chris_602473_Prg281_Proj\bin\Debug\Chris_602473_Prg281_Proj.pdb
