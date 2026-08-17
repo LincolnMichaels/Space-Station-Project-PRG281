@@ -3,44 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\insuffresexcep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|solutionrelative:insuffresexcep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\stationresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:stationresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\stationresourcesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:stationresourcesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\temperaturesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:temperaturesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\powersystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:powersystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationSimulation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|solutionrelative:StationSimulation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\temperaturesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:temperaturesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\alerteventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:alerteventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\stationresourcesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:stationresourcesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\stationresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:stationresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\oxygensystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:oxygensystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\insuffresexcep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|solutionrelative:insuffresexcep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\simulationtickeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:simulationtickeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\stationalerteventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:stationalerteventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|c:\\users\\linco\\onedrive\\desktop\\chris_602473_prg281_proj\\watersystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Lincoln_602473_Prg281_Proj.csproj|solutionrelative:watersystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationSimulation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|solutionrelative:StationSimulation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5DB27D95-592C-471F-8C5F-2C5471E27698}|Chris_602473_Prg281_Proj.csproj|C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\Astronaut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,17 +86,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAgwFsAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-16T08:03:46.65Z",
               "IsPinned": true,
@@ -92,13 +104,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Station.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\Station.cs",
               "RelativeDocumentMoniker": "Station.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\Station.cs",
               "RelativeToolTip": "Station.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAswGUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-16T08:04:20.12Z",
               "IsPinned": true,
@@ -106,13 +118,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "StationModule.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationModule.cs",
               "RelativeDocumentMoniker": "StationModule.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationModule.cs",
               "RelativeToolTip": "StationModule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-16T08:19:03.103Z",
               "IsPinned": true,
@@ -120,13 +132,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "StationSimulation.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationSimulation.cs",
               "RelativeDocumentMoniker": "StationSimulation.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationSimulation.cs",
               "RelativeToolTip": "StationSimulation.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAwwEoBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAtwD0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-16T14:07:44.242Z",
               "IsPinned": true,
@@ -134,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "StationEntity.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationEntity.cs",
               "RelativeDocumentMoniker": "StationEntity.cs",
@@ -148,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Equipement.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\Equipement.cs",
               "RelativeDocumentMoniker": "Equipement.cs",
@@ -162,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Enums.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\Enums.cs",
               "RelativeDocumentMoniker": "Enums.cs",
@@ -176,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Astronaut.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\Astronaut.cs",
               "RelativeDocumentMoniker": "Astronaut.cs",
@@ -190,13 +202,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "StationResourcesManager.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationResourcesManager.cs",
               "RelativeDocumentMoniker": "StationResourcesManager.cs",
-              "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationResourcesManager.cs*",
-              "RelativeToolTip": "StationResourcesManager.cs*",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAswA4AAAA2AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationResourcesManager.cs",
+              "RelativeToolTip": "StationResourcesManager.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T10:05:15.254Z",
               "IsPinned": true,
@@ -204,13 +216,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "StationResource.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationResource.cs",
               "RelativeDocumentMoniker": "StationResource.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationResource.cs",
               "RelativeToolTip": "StationResource.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAcwAsAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAWwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T12:06:48.713Z",
               "IsPinned": true,
@@ -224,7 +236,7 @@
               "RelativeDocumentMoniker": "OxygenSystem.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\OxygenSystem.cs",
               "RelativeToolTip": "OxygenSystem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAACQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T12:22:13.189Z",
               "IsPinned": true,
@@ -232,13 +244,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "WaterSystem.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\WaterSystem.cs",
               "RelativeDocumentMoniker": "WaterSystem.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\WaterSystem.cs",
               "RelativeToolTip": "WaterSystem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T13:02:42.061Z",
               "IsPinned": true,
@@ -246,13 +258,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "PowerSystem.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\PowerSystem.cs",
               "RelativeDocumentMoniker": "PowerSystem.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\PowerSystem.cs",
               "RelativeToolTip": "PowerSystem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvyUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T13:03:30.389Z",
               "IsPinned": true,
@@ -260,13 +272,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "TemperatureSystem.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\TemperatureSystem.cs",
               "RelativeDocumentMoniker": "TemperatureSystem.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\TemperatureSystem.cs",
               "RelativeToolTip": "TemperatureSystem.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T13:03:54.821Z",
               "IsPinned": true,
@@ -274,28 +286,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "AlertEventArgs.cs",
+              "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\AlertEventArgs.cs",
+              "RelativeDocumentMoniker": "AlertEventArgs.cs",
+              "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\AlertEventArgs.cs",
+              "RelativeToolTip": "AlertEventArgs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T18:48:08.895Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SimulationTickEventArgs.cs",
+              "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\SimulationTickEventArgs.cs",
+              "RelativeDocumentMoniker": "SimulationTickEventArgs.cs",
+              "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\SimulationTickEventArgs.cs",
+              "RelativeToolTip": "SimulationTickEventArgs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T18:53:38.544Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Interfaces.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\Interfaces.cs",
               "RelativeDocumentMoniker": "Interfaces.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\Interfaces.cs",
               "RelativeToolTip": "Interfaces.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T09:09:20.298Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "InsuffResExcep.cs",
               "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\InsuffResExcep.cs",
               "RelativeDocumentMoniker": "InsuffResExcep.cs",
               "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\InsuffResExcep.cs",
               "RelativeToolTip": "InsuffResExcep.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAwFcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T08:44:00.689Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StationAlertEventArgs.cs",
+              "DocumentMoniker": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationAlertEventArgs.cs",
+              "RelativeDocumentMoniker": "StationAlertEventArgs.cs",
+              "ToolTip": "C:\\Users\\linco\\OneDrive\\Desktop\\Chris_602473_Prg281_Proj\\StationAlertEventArgs.cs",
+              "RelativeToolTip": "StationAlertEventArgs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T19:17:13.487Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {

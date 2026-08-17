@@ -23,15 +23,19 @@ namespace Chris_602473_Prg281_Proj
             }
             if (PercentRemaining <= 20)
             {
-                OnAlertRaised(new StationAlertEventArgs(SystemName,
+                OnAlertRaised(new StationAlertEventArgs(
+                    AlertServerity.Emergency.ToString(),
                     $"Emergency: Oxygen level critically low at {PercentRemaining: F1}%!",
+                    SystemName,
                     AlertServerity.Emergency,
                     DateTime.Now));
             }
             else if (PercentRemaining <= 40)
             {
-                OnAlertRaised(new StationAlertEventArgs(SystemName,
+                OnAlertRaised(new StationAlertEventArgs(
+                    AlertServerity.Warning.ToString(),
                     $"Warning: Oxygen level reduced to {PercentRemaining: F1}%!.",
+                    SystemName,
                     AlertServerity.Warning,
                     DateTime.Now));
             }

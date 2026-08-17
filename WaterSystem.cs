@@ -22,15 +22,19 @@ namespace Chris_602473_Prg281_Proj
             }
             if (PercentRemaining <= 15)
             {
-                OnAlertRaised(new StationAlertEventArgs(SystemName,
+                OnAlertRaised(new StationAlertEventArgs(
+                    AlertServerity.Emergency.ToString(),
                     $"Emergency: Water supply critically low at {PercentRemaining: F1}%!",
+                    SystemName,
                     AlertServerity.Emergency,
                     DateTime.Now));
             }
             else if (PercentRemaining <= 35)
             {
-                OnAlertRaised(new StationAlertEventArgs(SystemName,
+                OnAlertRaised(new StationAlertEventArgs(
+                    AlertServerity.Warning.ToString(),
                     $"Warning: Water supply reduced to {PercentRemaining: F1}%!.",
+                    SystemName,
                     AlertServerity.Warning,
                     DateTime.Now));
             }

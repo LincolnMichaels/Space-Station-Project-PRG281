@@ -28,6 +28,7 @@ namespace Chris_602473_Prg281_Proj
 
             while (!exit)
             {
+                Console.Clear();
                 Console.WriteLine("\n--- Menu ---");
                 Console.WriteLine("1. Add Astronaut");
                 Console.WriteLine("2. Add Module");
@@ -43,7 +44,8 @@ namespace Chris_602473_Prg281_Proj
                 Console.WriteLine("12. Resume Background Simulation");
                 Console.WriteLine("13. Restart Simulation (reset to defaults)");
                 Console.WriteLine("0. Exit");
-                Console.Write("Choose: ");
+                Console.Write("Choose: \n\n");
+                
                 string choice = Console.ReadLine();
 
                 switch (choice)
@@ -100,6 +102,8 @@ namespace Chris_602473_Prg281_Proj
                         Console.WriteLine("Invalid choice.");
                         break;
                 }
+                Console.WriteLine("\nPress any Key to continue...");
+                Console.ReadKey();
             }
         }
 

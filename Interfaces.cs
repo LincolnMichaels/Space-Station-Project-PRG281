@@ -16,31 +16,11 @@ namespace Chris_602473_Prg281_Proj
 
     //Custom EventArgs carring strustured alert data
 
-    public class StationAlertEventArgs : EventArgs
-    {
-        public string systemName { get; }
-        public string message { get; }
-        public AlertServerity serverity { get; }
-        public DateTime timeStamp { get; }
-
-        public StationAlertEventArgs(string systemName, string message, AlertServerity serverity, DateTime timeStamp)
-        {
-            this.systemName = systemName;
-            this.message = message;
-            this.serverity = serverity;
-            this.timeStamp = timeStamp;
-        }
-
-        public override string ToString() =>
-            $"[{Timestamp:HH:mm:ss}] ({Severity}) {systemName}: {message}";
-
-    }
-
-    public delegate void ResourceAlertHandler(object sender, StationAlertEventArgs e);
+    public delegate void ResourceAlertHandler(object sender, AlertEventArgs e);
 
     //Interface 1:  behaviour contract for anything that draws down a
     /// finite station resource (oxygen, water, food, power...).
-    
+
     public interface IResourceConsumer
     {
         string SystemName { get; }

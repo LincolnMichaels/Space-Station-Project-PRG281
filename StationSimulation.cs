@@ -25,37 +25,9 @@ namespace Chris_602473_Prg281_Proj
     // ====================================================================
 
     // Raised whenever the simulation detects a warning/critical condition.
-    public class StationAlertEventArgs : EventArgs
-    {
-        public string Severity { get; }   // "WARNING" or "CRITICAL"
-        public string Message { get; }
-        public DateTime Timestamp { get; }
-
-        public StationAlertEventArgs(string severity, string message)
-        {
-            Severity = severity;
-            Message = message;
-            Timestamp = DateTime.Now;
-        }
-    }
 
     // Raised on every simulation tick with a snapshot of resource levels.
-    public class SimulationTickEventArgs : EventArgs
-    {
-        public int Oxygen { get; }
-        public int Water { get; }
-        public int Power { get; }
-        public double Temperature { get; }
-
-        public SimulationTickEventArgs(int oxygen, int water, int power, double temperature)
-        {
-            Oxygen = oxygen;
-            Water = water;
-            Power = power;
-            Temperature = temperature;
-        }
-    }
-
+    
     public class StationSimulation
     {
         private readonly Station _station;
@@ -87,7 +59,7 @@ namespace Chris_602473_Prg281_Proj
         public event EventHandler<SimulationTickEventArgs> Tick;
 
         // Fires when a warning/critical condition is detected.
-        public event EventHandler<StationAlertEventArgs> AlertRaised;
+        public event EventHandler<AlertEventArgs> AlertRaised;
 
         public StationSimulation(Station station)
         {
@@ -305,7 +277,7 @@ namespace Chris_602473_Prg281_Proj
 
         private void RaiseAlert(string severity, string message)
         {
-            AlertRaised?.Invoke(this, new StationAlertEventArgs(severity, message));
+            AlertRaised?.Invoke(this, new AlertEventArgs(severity, message));
         }
 
         private void ApplyHealthDamage(Astronaut astronaut, int damage, string cause)

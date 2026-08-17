@@ -82,6 +82,9 @@ namespace Chris_602473_Prg281_Proj
             }
                 catch (CritSysFailExcep ex)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(ex.Message);
+                    Console.ResetColor();
                     if (firstFailure == null) firstFailure = ex;
                 }
             }
@@ -113,7 +116,7 @@ namespace Chris_602473_Prg281_Proj
             }
         }
 
-        protected virtual void OnAlertRaised(StationAlertEventArgs e)
+        protected virtual void OnAlertRaised(AlertEventArgs e)
         {
             AlertRaised?.Invoke(this, e);
         }

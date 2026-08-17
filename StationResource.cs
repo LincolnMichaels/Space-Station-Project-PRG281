@@ -52,6 +52,12 @@ namespace Chris_602473_Prg281_Proj
         //Evaluates resouce level
         public abstract void CheckStatus();
 
+
+
+        protected virtual void OnAlertRaised(AlertEventArgs e)
+        {
+            AlertRaised?.Invoke(this, e);
+        }
         protected virtual void OnAlertRaised(StationAlertEventArgs e)
         {
             AlertRaised?.Invoke(this, e);
