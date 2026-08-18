@@ -74,13 +74,36 @@ namespace Chris_602473_Prg281_Proj
 
         public Equipment GetEquipment(string id) => _equipment.FirstOrDefault(e => e.Id == id);
 
-        // Assignment
+        // Astronaut Assignment
         public bool AssignAstronautToModule(string astronautId, string moduleId)
         {
             var astronaut = GetAstronaut(astronautId);
             var module = GetModule(moduleId);
             if (astronaut == null || module == null) return false;
             return module.AddAstronaut(astronaut);
+        }
+
+        //Equipment Assignment
+        public bool AssignEquipmentToModule(string equipmentId, string moduleId)
+        {
+            Equipment equipment =
+                GetEquipment(equipmentId);
+
+            StationModule module = GetModule(moduleId);
+
+            if (equipment == null || module == null)
+            {
+                return false;
+            }
+
+            if (equipment.AssignedModule != null)
+            {
+                equipment.AssignedModule.RemoveEquipment(equipment);
+            }
+
+            module.AddEquipment(equipment);
+
+            return true;
         }
 
         // Info methods
