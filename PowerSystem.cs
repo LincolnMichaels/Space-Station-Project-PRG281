@@ -9,7 +9,7 @@ namespace Chris_602473_Prg281_Proj
     public class PowerSystem : StationResource
     {
         public PowerSystem(double maxCapacity = 100, double startinglevel = 100)
-           : base("Oxygen", maxCapacity, startinglevel)
+           : base("Power", startinglevel, maxCapacity)
         {
 
         }
@@ -19,13 +19,13 @@ namespace Chris_602473_Prg281_Proj
             if (PercentRemaining <= 0)
             {
                 throw new CritSysFailExcep(SystemName,
-                    "Oxygen supply conpletely depleted! Life support failure!");
+                    "Power supply completely depleted! Station-wide power failure!");
             }
             if (PercentRemaining <= 20)
             {
                 OnAlertRaised(new StationAlertEventArgs(
                     AlertServerity.Emergency.ToString(),
-                    $"Emergency: Oxygen level critically low at {PercentRemaining: F1}%!",
+                    $"Emergency: Power level critically low at {PercentRemaining: F1}%!",
                     SystemName,
                     AlertServerity.Emergency,
                     DateTime.Now));
@@ -34,7 +34,7 @@ namespace Chris_602473_Prg281_Proj
             {
                 OnAlertRaised(new StationAlertEventArgs(
                     AlertServerity.Warning.ToString(),
-                    $"Warning: Oxygen level reduced to {PercentRemaining: F1}%!.",
+                    $"Warning: Power level reduced to {PercentRemaining: F1}%!.",
                     SystemName,
                     AlertServerity.Warning,
                     DateTime.Now));

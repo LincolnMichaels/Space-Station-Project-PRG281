@@ -9,7 +9,8 @@ namespace Chris_602473_Prg281_Proj
     class Program
     {
         private static Station station = new Station();
-        private static StationSimulation simulation = new StationSimulation(station);
+        private static StationResourceManager resourceManager = new StationResourceManager();
+        private static StationSimulation simulation = new StationSimulation(station, resourceManager);
 
         static void Main(string[] args)
         {
@@ -236,7 +237,6 @@ namespace Chris_602473_Prg281_Proj
 
         // Displays the simulation engine's current resource snapshot.
         // Reads whatever the engine currently tracks.
-        // This still needs to be wired to Person 2's real resource manager instead of its own placeholder numbers.
         static void ShowResourceLevels()
         {
             Console.WriteLine("\n=== Live Station Resources (Simulation Engine) ===");

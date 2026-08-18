@@ -36,23 +36,24 @@ namespace Chris_602473_Prg281_Proj
         private Task _loopTask;
         private readonly object _stateLock = new object();
 
-        // TODO: Once Person 2's resource manager / IResourceConsumer implementation exists, replace these four fields with reads/writes against that instead. 
-        // Kept here so the engine is runnable and demoable on its own right now.
-        public int Oxygen { get; private set; } = 100;
-        public int Water { get; private set; } = 100;
-        public int Power { get; private set; } = 100;
-        public double Temperature { get; private set; } = 21.0;
+        private readonly StationResourceManager _resources;
+        public int Oxygen => _resources.OxygenPercent;
+        public int Water => _resources.WaterPercent;
+        public int Power => _resources.PowerPercent;
+        public double Temperature => _resources.TemperatureCelsius;
 
         public bool IsRunning => _loopTask != null && !_loopTask.IsCompleted;
 
-        // Tracks whether each alert is currently "active" so RaiseAlert only and fires once when a threshold is crossed, instead of every tick the condition remains true.
+        // Tracks whether the alert is currently "active" so RaiseAlert only and fires once when a threshold is crossed, instead of every tick the condition remains true.
         // See SimulateOneTick for the crossing logic.
-        private bool _oxygenWarningActive = false;
-        private bool _oxygenCriticalActive = false;
         private bool _powerCriticalActive = false;
+
         private bool _waterCriticalActive = false;
 
-        // Remembers each astronaut's last-reported 25% health band (keyed by ID)
+        private readonly HashSet<string> _powerShutdownEquipmentIds = new HashSet<string>();
+        private readonly HashSet<string> _waterShutdownEquipmentIds = new HashSet<string>();
+
+        // Remembers each astronaut's last-reported 25% health band (keyed by ID).
         private readonly Dictionary<string, int> _lastHealthBand = new Dictionary<string, int>();
 
         // Fires every tick with a resource snapshot. Person 4 can subscribe for live display.
@@ -61,9 +62,12 @@ namespace Chris_602473_Prg281_Proj
         // Fires when a warning/critical condition is detected.
         public event EventHandler<AlertEventArgs> AlertRaised;
 
-        public StationSimulation(Station station)
+        public StationSimulation(Station station, StationResourceManager resources)
         {
             _station = station ?? throw new ArgumentNullException(nameof(station));
+            _resources = resources ?? throw new ArgumentNullException(nameof(resources));
+
+            _resources.AlertRaised += (s, e) => AlertRaised?.Invoke(this, e);
         }
 
         // Starts the background loop. Safe to call if already stopped/never started.
@@ -86,14 +90,11 @@ namespace Chris_602473_Prg281_Proj
         {
             lock (_stateLock)
             {
-                Oxygen = 100;
-                Water = 100;
-                Power = 100;
-                Temperature = 21.0;
-                _oxygenWarningActive = false;
-                _oxygenCriticalActive = false;
+                _resources.Reset();
                 _powerCriticalActive = false;
                 _waterCriticalActive = false;
+                _powerShutdownEquipmentIds.Clear();
+                _waterShutdownEquipmentIds.Clear();
                 _lastHealthBand.Clear();
             }
         }
@@ -123,7 +124,7 @@ namespace Chris_602473_Prg281_Proj
 
                 try
                 {
-                    await Task.Delay(5000, token); // "every 5 seconds" per the brief
+                    await Task.Delay(5000, token); // "Every 5 seconds" per the brief.
                 }
                 catch (TaskCanceledException)
                 {
@@ -136,94 +137,70 @@ namespace Chris_602473_Prg281_Proj
         {
             int oxygenSnapshot, waterSnapshot, powerSnapshot;
             double tempSnapshot;
-            bool powerCriticalThisTick;
+            bool powerCriticalThisTick = false;
 
-            lock (_stateLock)
+            // Consumption goes through Person 2's Consume() calls.
+            // Consume() throws InsuffResExcep if the draw exceeds what's left, which would fire every single tick once a resource nears 0 so each draw is clamped to what's actually available first.
+            // The try/catch below is for the genuinely abnormal case (a draw request larger than what clamping accounts for), not for routine depletion.
+            try
             {
-                // Power depletes on its own, independent of everything else.
-                // TODO (Person 2): Water below, and Temperature still have placeholder functionality: same status as Oxygen, pending their real resource manager / IResourceConsumer.
-                Power = Clamp(Power - _rng.Next(1, 5));
-                powerCriticalThisTick = Power < 15;
+                lock (_stateLock)
+                {
+                    // Power depletes on its own, independent of everything else.
+                    double powerDraw = Math.Min(_resources.Power.CurrentLevel, _rng.Next(1, 5));
+                    if (powerDraw > 0) _resources.Power.Consume(powerDraw);
+                    powerCriticalThisTick = _resources.Power.PercentRemaining < 15;
 
-                // Oxygen ALWAYS drains at this baseline rate.
-                // ADDITIONAL drain on top of the baseline, so oxygen loss accelerates when power is critical. 
-                // TODO (Person 2): same as above, swap for the real resource manager once it exists.
-                int oxygenDraw = _rng.Next(1, 4); // baseline, always applied
-                if (powerCriticalThisTick)
-                    oxygenDraw += _rng.Next(2, 5); // extra strain, power loss only
-                Oxygen = Clamp(Oxygen - oxygenDraw);
+                    // Oxygen always drains at this baseline rate.
+                    // Additional drain on top of the baseline when power is critical, so oxygen loss accelerates rather than only happening when power is out.
+                    double oxygenDraw = _rng.Next(1, 4); // Baseline, always applied.
+                    if (powerCriticalThisTick)
+                        oxygenDraw += _rng.Next(2, 5); // Extra strain, power loss only.
+                    oxygenDraw = Math.Min(_resources.Oxygen.CurrentLevel, oxygenDraw);
+                    if (oxygenDraw > 0) _resources.Oxygen.Consume(oxygenDraw);
 
-                Water = Clamp(Water - _rng.Next(0, 3));
-                Temperature += (_rng.NextDouble() - 0.5);
+                    double waterDraw = Math.Min(_resources.Water.CurrentLevel, _rng.Next(0, 3));
+                    if (waterDraw > 0) _resources.Water.Consume(waterDraw);
 
-                oxygenSnapshot = Oxygen;
-                waterSnapshot = Water;
-                powerSnapshot = Power;
-                tempSnapshot = Temperature;
+                    _resources.AdjustTemperature(_rng.NextDouble() - 0.5);
+                }
             }
+            catch (InsuffResExcep ex)
+            {
+                RaiseAlert("CRITICAL", $"Resource draw failed during simulation: {ex.Message}");
+            }
+
+            // Lets each system evaluate itself and raise its own alerts (forwarded to our AlertRaised via the subscription set up in the constructor). 
+            // CheckStatus() can throw CritSysFailExcep if a system is fully depleted / out of safe range.
+            try
+            {
+                _resources.CheckStatus();
+            }
+            catch (CritSysFailExcep ex)
+            {
+                RaiseAlert("CRITICAL", ex.Message);
+            }
+
+            oxygenSnapshot = Oxygen;
+            waterSnapshot = Water;
+            powerSnapshot = Power;
+            tempSnapshot = Temperature;
 
             Tick?.Invoke(this, new SimulationTickEventArgs(oxygenSnapshot, waterSnapshot, powerSnapshot, tempSnapshot));
 
-            // Threshold alerts. Long term this logic (and the exception for over allocation) belongs to Person 2's resource manager. this is a working stand in so the engine is event driven right now.
-            // Made edge-triggered below: each alert fires once when the level crosses into a threshold, and once more when it recovers back out of it.
-            if (oxygenSnapshot < 20)
+            if (powerCriticalThisTick && !_powerCriticalActive)
             {
-                if (!_oxygenCriticalActive)
-                {
-                    RaiseAlert("CRITICAL", $"Oxygen critically low: {oxygenSnapshot}%");
-                    _oxygenCriticalActive = true;
-                }
-                _oxygenWarningActive = true;
+                RaiseAlert("WARNING", "Oxygen consumption is increasing due to power failure.");
+                ShutdownEquipment(_powerShutdownEquipmentIds, "power failure", e => true);
             }
-            else if (oxygenSnapshot < 40)
+            else if (!powerCriticalThisTick && _powerCriticalActive)
             {
-                if (!_oxygenWarningActive)
-                    RaiseAlert("WARNING", $"Oxygen level dropping: {oxygenSnapshot}%");
-                if (_oxygenCriticalActive)
-                    RaiseAlert("OK", $"Oxygen back above critical threshold: {oxygenSnapshot}%");
-                _oxygenWarningActive = true;
-                _oxygenCriticalActive = false;
+                RestoreEquipment(_powerShutdownEquipmentIds, "power restored");
             }
-            else
-            {
-                if (_oxygenWarningActive || _oxygenCriticalActive)
-                    RaiseAlert("OK", $"Oxygen levels back to normal: {oxygenSnapshot}%");
-                _oxygenWarningActive = false;
-                _oxygenCriticalActive = false;
-            }
-
-            if (powerSnapshot < 15)
-            {
-                if (!_powerCriticalActive)
-                {
-                    RaiseAlert("CRITICAL", $"Power failure risk: {powerSnapshot}%");
-                    RaiseAlert("WARNING", "Oxygen consumption is increasing due to power failure.");
-                    _powerCriticalActive = true;
-                }
-            }
-            else if (_powerCriticalActive)
-            {
-                RaiseAlert("OK", $"Power levels back to normal: {powerSnapshot}%");
-                _powerCriticalActive = false;
-            }
-
-            // Water critical, same edge triggered pattern as oxygen/power.
-            if (waterSnapshot < 15)
-            {
-                if (!_waterCriticalActive)
-                {
-                    RaiseAlert("CRITICAL", $"Water reserves critically low: {waterSnapshot}%");
-                    _waterCriticalActive = true;
-                }
-            }
-            else if (_waterCriticalActive)
-            {
-                RaiseAlert("OK", $"Water reserves back to normal: {waterSnapshot}%");
-                _waterCriticalActive = false;
-            }
+            _powerCriticalActive = powerCriticalThisTick;
 
             // While oxygen is critical, all astronauts take damage each tick; if health hits 0 they're marked Deceased.
-            // Alerts are made to fire once per 25% lost health per person
+            // Alerts are made to fire once per 25% lost health per person.
             if (oxygenSnapshot < 20)
             {
                 var crew = _station.Astronauts?.Where(a => a.Status == Status.Active).ToList();
@@ -234,8 +211,7 @@ namespace Chris_602473_Prg281_Proj
                 }
             }
 
-            // Water depletion is a much slower death than oxygen: smaller
-            // damage, and only a chance per tick rather than guaranteed.
+            // Water depletion is a much slower death than oxygen: smaller damage, and only a chance per tick rather than guaranteed.
             if (waterSnapshot < 15)
             {
                 var crew = _station.Astronauts?.Where(a => a.Status == Status.Active).ToList();
@@ -243,15 +219,27 @@ namespace Chris_602473_Prg281_Proj
                 {
                     foreach (var astronaut in crew)
                     {
-                        if (_rng.Next(0, 100) < 50) // ~50% chance per tick, vs. guaranteed for oxygen
+                        if (_rng.Next(0, 100) < 50) // ~50% Chance per tick, vs guaranteed for oxygen.
                             ApplyHealthDamage(astronaut, _rng.Next(1, 3), "dehydration");
                     }
                 }
             }
 
+            // Same pattern for water, but scoped to LifeSupport equipment only so water shortage plausibly affects life-support-related systems specifically.
+            bool waterCriticalThisTick = waterSnapshot < 15;
+            if (waterCriticalThisTick && !_waterCriticalActive)
+            {
+                ShutdownEquipment(_waterShutdownEquipmentIds, "water shortage", e => e.Type == EquipmentType.LifeSupport);
+            }
+            else if (!waterCriticalThisTick && _waterCriticalActive)
+            {
+                RestoreEquipment(_waterShutdownEquipmentIds, "water restored");
+            }
+            _waterCriticalActive = waterCriticalThisTick;
+
             // Random equipment failure now wired to Equipment.IsOperational
             // (confirmed real property, from Equipement.cs). Picks a random currently-operational item and actually takes it offline, rather than just reporting it.
-            if (_rng.Next(0, 100) < 8) // ~8% chance per tick
+            if (_rng.Next(0, 100) < 8) // ~8% Chance per tick.
             {
                 var operational = _station.EquipmentList?.Where(e => e.IsOperational).ToList();
                 if (operational != null && operational.Count > 0)
@@ -263,7 +251,7 @@ namespace Chris_602473_Prg281_Proj
             }
 
             // Occasional repair, so the station doesn't just grind down to zero operational equipment over a long-running demo. Same property, opposite direction.
-            if (_rng.Next(0, 100) < 4) // ~4% chance per tick
+            if (_rng.Next(0, 100) < 4) // ~4% Chance per tick.
             {
                 var broken = _station.EquipmentList?.Where(e => !e.IsOperational).ToList();
                 if (broken != null && broken.Count > 0)
@@ -278,6 +266,42 @@ namespace Chris_602473_Prg281_Proj
         private void RaiseAlert(string severity, string message)
         {
             AlertRaised?.Invoke(this, new AlertEventArgs(severity, message));
+        }
+
+        // Shuts down roughly half of currently operational equipment that matches `eligible` (e.g. "all of it" for power, "LifeSupport only" for water), and remembers which items it touched in `tracker` so RestoreEquipment can bring back exactly those items later but not anything the random failure mechanic separately took offline.
+        private void ShutdownEquipment(HashSet<string> tracker, string causeLabel, Func<Equipment, bool> eligible)
+        {
+            var candidates = _station.EquipmentList?.Where(e => e.IsOperational && eligible(e)).ToList();
+            if (candidates == null || candidates.Count == 0) return;
+
+            int toShutDown = Math.Max(1, (candidates.Count + 1) / 2); // Roughly half, at least one.
+            var chosen = candidates.OrderBy(_ => _rng.Next()).Take(toShutDown).ToList();
+
+            foreach (var eq in chosen)
+            {
+                eq.IsOperational = false;
+                tracker.Add(eq.Id);
+            }
+
+            RaiseAlert("CRITICAL", $"{chosen.Count} equipment unit(s) shut down due to {causeLabel}.");
+        }
+
+        // Restores exactly the equipment this mechanism shut down (not equipment the random failure/repair cycle separately touched), then clears the tracker.
+        private void RestoreEquipment(HashSet<string> tracker, string reason)
+        {
+            if (tracker.Count == 0) return;
+
+            var restored = _station.EquipmentList?.Where(e => tracker.Contains(e.Id)).ToList();
+            if (restored != null)
+            {
+                foreach (var eq in restored)
+                    eq.IsOperational = true;
+
+                if (restored.Count > 0)
+                    RaiseAlert("OK", $"{restored.Count} equipment unit(s) back online — {reason}.");
+            }
+
+            tracker.Clear();
         }
 
         private void ApplyHealthDamage(Astronaut astronaut, int damage, string cause)
@@ -295,9 +319,9 @@ namespace Chris_602473_Prg281_Proj
             {
                 astronaut.Status = Status.Deceased;
                 RaiseAlert("CRITICAL", $"{astronaut.Name} has died due to {cause}.");
+
+                astronaut.AssignedModule?.RemoveAstronaut(astronaut);
             }
         }
-
-        private static int Clamp(int value) => Math.Max(0, Math.Min(100, value));
     }
 }

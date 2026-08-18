@@ -9,7 +9,7 @@ namespace Chris_602473_Prg281_Proj
     public class WaterSystem : StationResource
     {
         public WaterSystem(double maxCapacity = 100, double startinglevel = 100)
-           : base("Water", maxCapacity, startinglevel)
+           : base("Water", startinglevel, maxCapacity)
         {
         }
 

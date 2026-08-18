@@ -9,7 +9,7 @@ namespace Chris_602473_Prg281_Proj
     public class TemperatureSystem : StationResource
     {
         public TemperatureSystem(double startingCelsius = 21.0)
-           : base("Temperature", 50.0, startingCelsius)
+           : base("Temperature", startingCelsius, 50.0)
         {
 
         }

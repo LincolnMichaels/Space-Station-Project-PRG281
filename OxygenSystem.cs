@@ -6,7 +6,7 @@ namespace Chris_602473_Prg281_Proj
     {
 
         public OxygenSystem(double maxCapacity = 100, double startinglevel = 100)
-            : base("Oxygen", maxCapacity, startinglevel)
+            : base("Oxygen", startinglevel, maxCapacity)
         {
         }
 
